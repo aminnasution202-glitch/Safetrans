@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeTrans | Escrow & Rental Kendaraan</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff7ed;
+    }
+
+    .hero-bg {
+      background: linear-gradient(to right, #ea580c, #fb923c);
+    }
+
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="leading-tight">
+  <a href="index.html" class="text-2xl font-extrabold text-orange-600 block">
+    SafeTrans
+  </a>
+
+  <span class="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+  Escrow • Rental Mobil • Rental Truk
+</span>
+</div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="index.html" class="hover:text-orange-500 transition">Home</a>
+        <a href="escrow.html" class="hover:text-orange-500 transition">Layanan Escrow</a>
+        <a href="mobil.html" class="hover:text-orange-500 transition">Rental Mobil</a>
+        <a href="truk.html" class="hover:text-orange-500 transition">Rental Truk</a>
+        <a href="kontak.html" class="hover:text-orange-500 transition">Hubungi Kami</a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-orange-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-5 pb-5">
+      <div class="flex flex-col gap-4 font-semibold mt-4">
+        <a href="index.html" class="hover:text-orange-500">Home</a>
+        <a href="escrow.html" class="hover:text-orange-500">Layanan Escrow</a>
+        <a href="mobil.html" class="hover:text-orange-500">Rental Mobil</a>
+        <a href="truk.html" class="hover:text-orange-500">Rental Truk</a>
+        <a href="kontak.html" class="hover:text-orange-500">Hubungi Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg min-h-screen flex items-center pt-24">
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
+
+      <div class="text-white">
+        <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          Solusi Aman Untuk Escrow & Rental Kendaraan
+        </h2>
+
+        <p class="text-lg text-orange-100 mb-8 leading-relaxed">
+          SafeTrans hadir sebagai solusi terpercaya untuk layanan escrow,
+          rental mobil, dan rental truk logistik dengan sistem profesional,
+          aman, cepat, dan transparan.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="kontak.html" class="bg-white text-orange-600 px-7 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg">
+            Hubungi Kami
+          </a>
+
+          <a href="escrow.html" class="glass border border-white px-7 py-4 rounded-2xl font-bold hover:bg-white hover:text-orange-600 transition">
+            Pelajari Layanan
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full">
+          <img
+            src="images/safetrans.png"
+            class="rounded-2xl mb-5 w-full h-64 object-cover"
+          />
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-3">
+            Mitra Transportasi & Escrow Terpercaya
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Mendukung kebutuhan bisnis, logistik, hingga transaksi aman dengan sistem terpercaya dan layanan profesional.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-extrabold text-orange-600 mb-4">
+          Layanan Kami
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Kami menyediakan berbagai layanan profesional untuk mendukung kebutuhan transaksi aman dan transportasi Anda.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
+          <div class="text-5xl mb-5">🔒</div>
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-4">
+            Layanan Escrow
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Sistem transaksi aman untuk mengurangi risiko penipuan antara pembeli dan penjual.
+          </p>
+
+          <a href="escrow.html" class="font-bold text-orange-600 hover:text-orange-800">
+            Selengkapnya →
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
+          <div class="text-5xl mb-5">🚗</div>
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-4">
+            Rental Mobil
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Tersedia berbagai unit mobil nyaman dan terawat untuk kebutuhan pribadi maupun perusahaan.
+          </p>
+
+          <a href="mobil.html" class="font-bold text-orange-600 hover:text-orange-800">
+            Selengkapnya →
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
+          <div class="text-5xl mb-5">🚛</div>
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-4">
+            Rental Truk
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Solusi armada logistik dan pengiriman barang dengan armada truk yang siap operasional.
+          </p>
+
+          <a href="truk.html" class="font-bold text-orange-600 hover:text-orange-800">
+            Selengkapnya →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-20 bg-orange-100">
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop"
+          alt="Transportasi"
+          class="rounded-3xl shadow-2xl"
+        />
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-extrabold text-orange-700 mb-6">
+          Kenapa Memilih SafeTrans?
+        </h2>
+
+        <div class="space-y-5">
+          <div class="bg-white rounded-2xl p-5 shadow-md">
+            <h3 class="font-bold text-lg text-orange-600 mb-2">
+              ✅ Transaksi Aman
+            </h3>
+            <p class="text-gray-600">
+              Sistem escrow membantu mengurangi risiko penipuan dalam transaksi online.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 shadow-md">
+            <h3 class="font-bold text-lg text-orange-600 mb-2">
+              ✅ Armada Berkualitas
+            </h3>
+            <p class="text-gray-600">
+              Unit mobil dan truk selalu dalam kondisi prima dan siap digunakan.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 shadow-md">
+            <h3 class="font-bold text-lg text-orange-600 mb-2">
+              ✅ Pelayanan Profesional
+            </h3>
+            <p class="text-gray-600">
+              Tim kami siap membantu kebutuhan pelanggan dengan cepat dan ramah.
+            </p>
+          </div>
+        </div>
+      </div>
+	  
+    </div>
+  </section>
+
+  <!-- Testimoni Pelanggan -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-extrabold text-orange-600 mb-4">
+          Testimoni Pelanggan
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Kepuasan pelanggan adalah prioritas utama kami. Berikut beberapa pengalaman pelanggan yang telah menggunakan layanan SafeTrans.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Testimoni 1 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+          <div class="text-yellow-500 text-2xl mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-600 italic mb-6">
+            "Layanan escrow SafeTrans sangat membantu transaksi saya. Proses aman, transparan, dan dana baru diteruskan setelah barang diterima."
+          </p>
+
+          <div>
+            <h4 class="font-bold text-orange-600">
+              Budi Santoso
+            </h4>
+            <span class="text-sm text-gray-500">
+              Pengusaha Online
+            </span>
+          </div>
+        </div>
+
+        <!-- Testimoni 2 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+          <div class="text-yellow-500 text-2xl mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-600 italic mb-6">
+            "Mobil yang disewa bersih, nyaman, dan sesuai dengan deskripsi. Pelayanan cepat dan sangat profesional."
+          </p>
+
+          <div>
+            <h4 class="font-bold text-orange-600">
+              Rina Maharani
+            </h4>
+            <span class="text-sm text-gray-500">
+              Karyawan Swasta
+            </span>
+          </div>
+        </div>
+
+        <!-- Testimoni 3 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+          <div class="text-yellow-500 text-2xl mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-600 italic mb-6">
+            "Kami menggunakan rental truk SafeTrans untuk distribusi barang antar kota. Armada terawat dan selalu tepat waktu."
+          </p>
+
+          <div>
+            <h4 class="font-bold text-orange-600">
+              Andi Wijaya
+            </h4>
+            <span class="text-sm text-gray-500">
+              Manager Logistik
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  
+  <!-- Statistik -->
+<div class="grid md:grid-cols-4 gap-6 mt-16">
+
+  <div class="bg-orange-600 text-white rounded-2xl p-6 text-center">
+    <h3 class="text-4xl font-extrabold">500+</h3>
+    <p>Pelanggan</p>
+  </div>
+
+  <div class="bg-orange-600 text-white rounded-2xl p-6 text-center">
+    <h3 class="text-4xl font-extrabold">1000+</h3>
+    <p>Transaksi Escrow</p>
+  </div>
+
+  <div class="bg-orange-600 text-white rounded-2xl p-6 text-center">
+    <h3 class="text-4xl font-extrabold">150+</h3>
+    <p>Armada Aktif</p>
+  </div>
+
+  <div class="bg-orange-600 text-white rounded-2xl p-6 text-center">
+    <h3 class="text-4xl font-extrabold">99%</h3>
+    <p>Tingkat Kepuasan</p>
+  </div>
+
+</div>
+  
+  <!-- CTA -->
+  <section class="py-20 bg-orange-600 text-white text-center">
+    <div class="max-w-4xl mx-auto px-5">
+      <h2 class="text-4xl font-extrabold mb-6">
+        Siap Menggunakan Layanan Kami?
+      </h2>
+
+      <p class="text-orange-100 text-lg mb-8 leading-relaxed">
+        Konsultasikan kebutuhan escrow, rental mobil, maupun rental truk Anda sekarang juga.
+      </p>
+
+      <a href="kontak.html" class="bg-white text-orange-600 px-8 py-4 rounded-2xl font-bold hover:scale-105 transition inline-block shadow-lg">
+        Hubungi Sekarang
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+
+      <div>
+        <h2 class="text-2xl font-extrabold text-orange-500 mb-4">
+          SafeTrans
+        </h2>
+
+        <p class="leading-relaxed text-gray-400">
+          Solusi escrow dan rental kendaraan terpercaya untuk kebutuhan pribadi maupun bisnis.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold text-white mb-4">
+          Menu
+        </h3>
+
+        <ul class="space-y-3">
+          <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+          <li><a href="escrow.html" class="hover:text-orange-400">Layanan Escrow</a></li>
+          <li><a href="mobil.html" class="hover:text-orange-400">Rental Mobil</a></li>
+          <li><a href="truk.html" class="hover:text-orange-400">Rental Truk</a></li>
+          <li><a href="kontak.html" class="hover:text-orange-400">Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold text-white mb-4">
+          Kontak
+        </h3>
+
+        <div class="space-y-3 text-gray-400">
+          <p>📍 Indonesia</p>
+          <p>📞 +62 812-3456-7890</p>
+          <p>✉ info@safetrans.id</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-500 text-sm">
+      © 2026 SafeTrans. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Javascript -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layanan Escrow | SafeTrans</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#fff7ed;
+    }
+
+    .hero-bg{
+      background:linear-gradient(to right,#ea580c,#fb923c);
+    }
+
+    .glass{
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="leading-tight">
+        <a href="index.html" class="text-2xl font-extrabold text-orange-600 block">
+          SafeTrans
+        </a>
+
+        <span class="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+          Escrow • Rental Mobil • Rental Truk
+        </span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold">
+        <a href="index.html" class="hover:text-orange-500 transition">
+          Home
+        </a>
+
+        <a href="escrow.html"
+          class="text-orange-600 border-b-2 border-orange-500 pb-1">
+          Layanan Escrow
+        </a>
+
+        <a href="mobil.html" class="hover:text-orange-500 transition">
+          Rental Mobil
+        </a>
+
+        <a href="truk.html" class="hover:text-orange-500 transition">
+          Rental Truk
+        </a>
+
+        <a href="kontak.html" class="hover:text-orange-500 transition">
+          Hubungi Kami
+        </a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-orange-600">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-gray-200 px-5 pb-5">
+
+      <div class="flex flex-col gap-4 font-semibold mt-4">
+
+        <a href="index.html" class="hover:text-orange-500">
+          Home
+        </a>
+
+        <a href="escrow.html" class="text-orange-600">
+          Layanan Escrow
+        </a>
+
+        <a href="mobil.html" class="hover:text-orange-500">
+          Rental Mobil
+        </a>
+
+        <a href="truk.html" class="hover:text-orange-500">
+          Rental Truk
+        </a>
+
+        <a href="kontak.html" class="hover:text-orange-500">
+          Hubungi Kami
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg pt-32 pb-24">
+
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
+
+      <!-- Left -->
+      <div class="text-white">
+
+        <div class="inline-block bg-white/20 px-4 py-2 rounded-full mb-5 text-sm font-semibold">
+          Trusted Escrow Service Indonesia
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+          Layanan Escrow Aman Untuk Transaksi Bernilai Besar
+        </h1>
+
+        <p class="text-lg text-orange-100 leading-relaxed mb-8">
+          SafeTrans membantu menjaga keamanan transaksi dengan sistem escrow profesional,
+          transparan, dan terpercaya untuk kebutuhan bisnis, kendaraan,
+          proyek, hingga transaksi online bernilai besar.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+
+          <a href="kontak.html"
+            class="bg-white text-orange-600 px-7 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg">
+            Konsultasi Sekarang
+          </a>
+
+          <a href="#cara-kerja"
+            class="glass border border-white px-7 py-4 rounded-2xl font-bold hover:bg-white hover:text-orange-600 transition">
+            Cara Kerja
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div class="flex justify-center">
+
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+          <img
+            src="images/escrow-safetrans.png"
+            class="w-full h-64 md:h-full object-cover"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Penjelasan -->
+  <section class="py-20 bg-white">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-14">
+
+        <h2 class="text-4xl font-extrabold text-orange-600 mb-5">
+          Apa Itu Escrow?
+        </h2>
+
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
+          Escrow adalah layanan rekening penengah yang menjaga dana transaksi
+          agar lebih aman bagi pembeli maupun penjual.
+          SafeTrans hadir sebagai pihak netral untuk membantu memastikan
+          transaksi berjalan profesional, aman, dan transparan.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-5">
+            Kenapa Escrow Dibutuhkan?
+          </h3>
+
+          <div class="space-y-5 text-gray-700">
+
+            <div class="flex gap-4">
+              <div class="text-2xl">⚠️</div>
+
+              <p>
+                Pembeli takut ditipu setelah transfer dana.
+              </p>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl">⚠️</div>
+
+              <p>
+                Penjual takut barang atau jasa sudah dikirim tapi pembayaran tidak diterima.
+              </p>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl">🛡️</div>
+
+              <p>
+                Escrow hadir sebagai pihak netral untuk menjaga transaksi tetap aman.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="bg-orange-600 text-white rounded-3xl p-8 shadow-2xl">
+
+          <h3 class="text-2xl font-bold mb-5">
+            Cocok Untuk:
+          </h3>
+
+          <div class="space-y-5">
+
+            <div class="flex gap-4">
+              <div class="text-2xl">🚗</div>
+              <p>Rental mobil perusahaan</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl">🚛</div>
+              <p>Rental truk dan logistik</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl">🏠</div>
+              <p>Jual beli properti</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl">💻</div>
+              <p>Proyek freelance & software</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl">📦</div>
+              <p>Pengadaan barang & proyek bisnis</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Cara Kerja -->
+  <section id="cara-kerja" class="py-20 bg-orange-100">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-16">
+
+        <h2 class="text-4xl font-extrabold text-orange-700 mb-5">
+          Cara Kerja Escrow
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Sistem escrow bekerja sebagai penengah untuk menjaga keamanan transaksi.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+
+        <!-- Step -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center text-2xl mb-5">
+            1
+          </div>
+
+          <h3 class="text-xl font-bold text-orange-600 mb-4">
+            Pembeli Bayar
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Dana dikirim ke rekening escrow dan tidak langsung masuk ke penjual.
+          </p>
+
+        </div>
+
+        <!-- Step -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center text-2xl mb-5">
+            2
+          </div>
+
+          <h3 class="text-xl font-bold text-orange-600 mb-4">
+            Dana Ditahan
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Escrow menyimpan dana sementara sampai syarat transaksi terpenuhi.
+          </p>
+
+        </div>
+
+        <!-- Step -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center text-2xl mb-5">
+            3
+          </div>
+
+          <h3 class="text-xl font-bold text-orange-600 mb-4">
+            Barang/Jasa Dikirim
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Penjual mengirim barang, kendaraan, atau menyelesaikan jasa sesuai kesepakatan.
+          </p>
+
+        </div>
+
+        <!-- Step -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <div class="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center text-2xl mb-5">
+            4
+          </div>
+
+          <h3 class="text-xl font-bold text-orange-600 mb-4">
+            Dana Dicairkan
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Setelah transaksi selesai dan dikonfirmasi, dana diteruskan ke penjual.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Kelebihan -->
+  <section class="py-20 bg-white">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-14">
+
+        <h2 class="text-4xl font-extrabold text-orange-600 mb-5">
+          Kelebihan Layanan Escrow
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+
+          <div class="space-y-5 text-lg">
+
+            <div class="flex gap-4">
+              <div>✅</div>
+              <p>Mengurangi risiko penipuan</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div>✅</div>
+              <p>Membuat transaksi lebih profesional</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div>✅</div>
+              <p>Cocok untuk transaksi nominal besar</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div>✅</div>
+              <p>Memiliki alur transaksi yang jelas</p>
+            </div>
+
+            <div class="flex gap-4">
+              <div>✅</div>
+              <p>Mendukung sistem termin & progress</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="bg-gray-900 text-white rounded-3xl p-8 shadow-2xl">
+
+          <h3 class="text-2xl font-bold mb-6">
+            Hal Penting Sebelum Menggunakan Escrow
+          </h3>
+
+          <div class="space-y-6 text-gray-300">
+
+            <div>
+              <h4 class="font-bold text-orange-400 mb-2">
+                1. Pastikan Legalitas
+              </h4>
+
+              <p>
+                Gunakan penyedia escrow yang memiliki perusahaan jelas,
+                SOP sengketa, dan legalitas resmi.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-orange-400 mb-2">
+                2. Gunakan Rekening Perusahaan
+              </h4>
+
+              <p>
+                Hindari transfer langsung ke rekening pribadi tanpa invoice atau kontrak.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-orange-400 mb-2">
+                3. Tentukan Aturan Transaksi
+              </h4>
+
+              <p>
+                Sepakati sejak awal syarat pencairan dana, biaya, dan mekanisme sengketa.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  
+
+  <!-- CTA -->
+  <section class="py-20 bg-orange-600 text-white text-center">
+
+    <div class="max-w-4xl mx-auto px-5">
+
+      <h2 class="text-4xl font-extrabold mb-6">
+        Butuh Layanan Escrow Profesional?
+      </h2>
+
+      <p class="text-orange-100 text-lg leading-relaxed mb-8">
+        SafeTrans siap membantu transaksi Anda menjadi lebih aman,
+        terpercaya, dan transparan.
+      </p>
+
+      <a href="kontak.html"
+        class="bg-white text-orange-600 px-8 py-4 rounded-2xl font-bold hover:scale-105 transition inline-block shadow-lg">
+
+        Hubungi Kami
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+
+      <div>
+
+        <h2 class="text-2xl font-extrabold text-orange-500 mb-4">
+          SafeTrans
+        </h2>
+
+        <p class="leading-relaxed text-gray-400">
+          Solusi escrow dan rental kendaraan terpercaya untuk kebutuhan bisnis maupun pribadi.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-xl font-bold text-white mb-4">
+          Menu
+        </h3>
+
+        <ul class="space-y-3">
+
+          <li>
+            <a href="index.html" class="hover:text-orange-400">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="escrow.html" class="hover:text-orange-400">
+              Layanan Escrow
+            </a>
+          </li>
+
+          <li>
+            <a href="mobil.html" class="hover:text-orange-400">
+              Rental Mobil
+            </a>
+          </li>
+
+          <li>
+            <a href="truk.html" class="hover:text-orange-400">
+              Rental Truk
+            </a>
+          </li>
+
+          <li>
+            <a href="kontak.html" class="hover:text-orange-400">
+              Hubungi Kami
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-xl font-bold text-white mb-4">
+          Kontak
+        </h3>
+
+        <div class="space-y-3 text-gray-400">
+
+          <p>📍 Indonesia</p>
+          <p>📞 +62 812-3456-7890</p>
+          <p>✉ info@safetrans.id</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-500 text-sm">
+      <p id="year"></p>
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script>
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('year').innerHTML =
+    `© ${new Date().getFullYear()} SafeTrans. All Rights Reserved.`;
+
+  </script>
+
+</body>
+</html>

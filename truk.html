@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rental Truk | SafeTrans</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#fff7ed;
+    }
+
+    .hero-bg{
+      background:linear-gradient(to right,#ea580c,#fb923c);
+    }
+
+    .glass{
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="leading-tight">
+        <a href="index.html" class="text-2xl font-extrabold text-orange-600 block">
+          SafeTrans
+        </a>
+
+        <span class="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+          Escrow • Rental Mobil • Rental Truk
+        </span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold">
+
+        <a href="index.html" class="hover:text-orange-500 transition">
+          Home
+        </a>
+
+        <a href="escrow.html" class="hover:text-orange-500 transition">
+          Layanan Escrow
+        </a>
+
+        <a href="mobil.html" class="hover:text-orange-500 transition">
+          Rental Mobil
+        </a>
+
+        <a href="truk.html"
+          class="text-orange-600 border-b-2 border-orange-500 pb-1">
+          Rental Truk
+        </a>
+
+        <a href="kontak.html" class="hover:text-orange-500 transition">
+          Hubungi Kami
+        </a>
+
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-orange-600">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+
+          <path stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-gray-200 px-5 pb-5">
+
+      <div class="flex flex-col gap-4 font-semibold mt-4">
+
+        <a href="index.html" class="hover:text-orange-500">
+          Home
+        </a>
+
+        <a href="escrow.html" class="hover:text-orange-500">
+          Layanan Escrow
+        </a>
+
+        <a href="mobil.html" class="hover:text-orange-500">
+          Rental Mobil
+        </a>
+
+        <a href="truk.html" class="text-orange-600">
+          Rental Truk
+        </a>
+
+        <a href="kontak.html" class="hover:text-orange-500">
+          Hubungi Kami
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg pt-32 pb-24">
+
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
+
+      <!-- Left -->
+      <div class="text-white">
+
+        <div class="inline-block bg-white/20 px-4 py-2 rounded-full mb-5 text-sm font-semibold">
+          Professional Truck Rental Service
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+          Solusi Rental Truk Untuk Kebutuhan Logistik & Bisnis
+        </h1>
+
+        <p class="text-lg text-orange-100 leading-relaxed mb-8">
+          SafeTrans menyediakan layanan rental truk profesional untuk kebutuhan
+          pengiriman barang, logistik perusahaan, proyek konstruksi,
+          distribusi, hingga operasional bisnis dengan armada siap jalan.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+
+          <a href="kontak.html"
+            class="bg-white text-orange-600 px-7 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-lg">
+
+            Sewa Sekarang
+
+          </a>
+
+          <a href="#armada"
+            class="glass border border-white px-7 py-4 rounded-2xl font-bold hover:bg-white hover:text-orange-600 transition">
+
+            Lihat Armada
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div class="flex justify-center">
+
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+          <img
+            src="images/truk-safetrans.png"
+            class="w-full h-64 md:h-full object-cover"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Tentang -->
+  <section class="py-20 bg-white">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-14">
+
+        <h2 class="text-4xl font-extrabold text-orange-600 mb-5">
+          Layanan Rental Truk Profesional
+        </h2>
+
+        <p class="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
+          Kami menyediakan berbagai jenis armada truk untuk mendukung kebutuhan
+          logistik, distribusi barang, proyek perusahaan, hingga pengiriman antar kota
+          dengan sistem aman, profesional, dan tepat waktu.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Card -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <div class="text-5xl mb-5">
+            🚛
+          </div>
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-4">
+            Armada Lengkap
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Tersedia berbagai jenis armada untuk kebutuhan logistik kecil hingga besar.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <div class="text-5xl mb-5">
+            📦
+          </div>
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-4">
+            Pengiriman Aman
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Sistem operasional profesional untuk menjaga keamanan barang selama perjalanan.
+          </p>
+
+        </div>
+
+        <!-- Card -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <div class="text-5xl mb-5">
+            ⏱️
+          </div>
+
+          <h3 class="text-2xl font-bold text-orange-600 mb-4">
+            Tepat Waktu
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed">
+            Pengiriman dan operasional dilakukan secara efisien dan sesuai jadwal.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Armada -->
+  <section id="armada" class="py-20 bg-orange-100">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-16">
+
+        <h2 class="text-4xl font-extrabold text-orange-700 mb-5">
+          Pilihan Armada Truk
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Pilihan armada sesuai kebutuhan distribusi dan logistik bisnis Anda.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Truck -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200&auto=format&fit=crop"
+            alt="Truk Box"
+            class="w-full h-56 object-cover"
+          />
+
+          <div class="p-7">
+
+            <h3 class="text-2xl font-bold text-orange-600 mb-3">
+              Truk Box
+            </h3>
+
+            <p class="text-gray-600 mb-5">
+              Cocok untuk distribusi barang retail, elektronik, dan logistik perusahaan.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <span class="font-bold text-lg text-gray-800">
+                Mulai Rp1.800.000
+              </span>
+
+              <a href="kontak.html"
+                class="bg-orange-600 text-white px-5 py-2 rounded-xl hover:bg-orange-700 transition">
+
+                Booking
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Truck -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1200&auto=format&fit=crop"
+            alt="Truk Wingbox"
+            class="w-full h-56 object-cover"
+          />
+
+          <div class="p-7">
+
+            <h3 class="text-2xl font-bold text-orange-600 mb-3">
+              Wingbox
+            </h3>
+
+            <p class="text-gray-600 mb-5">
+              Memudahkan bongkar muat cepat untuk kebutuhan distribusi skala besar.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <span class="font-bold text-lg text-gray-800">
+                Mulai Rp3.500.000
+              </span>
+
+              <a href="kontak.html"
+                class="bg-orange-600 text-white px-5 py-2 rounded-xl hover:bg-orange-700 transition">
+
+                Booking
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Truck -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=1200&auto=format&fit=crop"
+            alt="Trailer Container"
+            class="w-full h-56 object-cover"
+          />
+
+          <div class="p-7">
+
+            <h3 class="text-2xl font-bold text-orange-600 mb-3">
+              Trailer Container
+            </h3>
+
+            <p class="text-gray-600 mb-5">
+              Solusi pengangkutan container dan logistik berat antar kota maupun pelabuhan.
+            </p>
+
+            <div class="flex items-center justify-between">
+
+              <span class="font-bold text-lg text-gray-800">
+                Mulai Rp5.000.000
+              </span>
+
+              <a href="kontak.html"
+                class="bg-orange-600 text-white px-5 py-2 rounded-xl hover:bg-orange-700 transition">
+
+                Booking
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Kelebihan -->
+  <section class="py-20 bg-white">
+
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
+
+      <div>
+
+        <img
+          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop"
+          alt="Logistik Truk"
+          class="rounded-3xl shadow-2xl"
+        />
+
+      </div>
+
+      <div>
+
+        <h2 class="text-4xl font-extrabold text-orange-700 mb-6">
+          Kenapa Memilih SafeTrans?
+        </h2>
+
+        <div class="space-y-5">
+
+          <div class="bg-orange-50 rounded-2xl p-5 shadow-md">
+
+            <h3 class="font-bold text-lg text-orange-600 mb-2">
+              ✅ Driver Berpengalaman
+            </h3>
+
+            <p class="text-gray-600">
+              Didukung pengemudi profesional untuk operasional logistik yang aman.
+            </p>
+
+          </div>
+
+          <div class="bg-orange-50 rounded-2xl p-5 shadow-md">
+
+            <h3 class="font-bold text-lg text-orange-600 mb-2">
+              ✅ Operasional Profesional
+            </h3>
+
+            <p class="text-gray-600">
+              Sistem kerja rapi dan sesuai kebutuhan distribusi perusahaan.
+            </p>
+
+          </div>
+
+          <div class="bg-orange-50 rounded-2xl p-5 shadow-md">
+
+            <h3 class="font-bold text-lg text-orange-600 mb-2">
+              ✅ Support Cepat
+            </h3>
+
+            <p class="text-gray-600">
+              Tim kami siap membantu kebutuhan pengiriman dan koordinasi armada.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Testimoni Pelanggan -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-extrabold text-orange-600 mb-4">
+          Testimoni Pelanggan
+        </h2>
+
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Kepuasan pelanggan adalah prioritas utama kami. Berikut beberapa pengalaman pelanggan yang telah menggunakan layanan SafeTrans.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Testimoni 1 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+          <div class="text-yellow-500 text-2xl mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-600 italic mb-6">
+            "Layanan escrow SafeTrans sangat membantu transaksi saya. Proses aman, transparan, dan dana baru diteruskan setelah barang diterima."
+          </p>
+
+          <div>
+            <h4 class="font-bold text-orange-600">
+              Budi Santoso
+            </h4>
+            <span class="text-sm text-gray-500">
+              Pengusaha Online
+            </span>
+          </div>
+        </div>
+
+        <!-- Testimoni 2 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+          <div class="text-yellow-500 text-2xl mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-600 italic mb-6">
+            "Mobil yang disewa bersih, nyaman, dan sesuai dengan deskripsi. Pelayanan cepat dan sangat profesional."
+          </p>
+
+          <div>
+            <h4 class="font-bold text-orange-600">
+              Rina Maharani
+            </h4>
+            <span class="text-sm text-gray-500">
+              Karyawan Swasta
+            </span>
+          </div>
+        </div>
+
+        <!-- Testimoni 3 -->
+        <div class="bg-orange-50 rounded-3xl p-8 shadow-lg">
+          <div class="text-yellow-500 text-2xl mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-600 italic mb-6">
+            "Kami menggunakan rental truk SafeTrans untuk distribusi barang antar kota. Armada terawat dan selalu tepat waktu."
+          </p>
+
+          <div>
+            <h4 class="font-bold text-orange-600">
+              Andi Wijaya
+            </h4>
+            <span class="text-sm text-gray-500">
+              Manager Logistik
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="py-20 bg-orange-600 text-white text-center">
+
+    <div class="max-w-4xl mx-auto px-5">
+
+      <h2 class="text-4xl font-extrabold mb-6">
+        Butuh Armada Untuk Bisnis Anda?
+      </h2>
+
+      <p class="text-orange-100 text-lg leading-relaxed mb-8">
+        SafeTrans siap membantu kebutuhan logistik dan distribusi perusahaan Anda
+        dengan armada profesional dan terpercaya.
+      </p>
+
+      <a href="kontak.html"
+        class="bg-white text-orange-600 px-8 py-4 rounded-2xl font-bold hover:scale-105 transition inline-block shadow-lg">
+
+        Hubungi Kami
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+
+      <div>
+
+        <h2 class="text-2xl font-extrabold text-orange-500 mb-4">
+          SafeTrans
+        </h2>
+
+        <p class="leading-relaxed text-gray-400">
+          Solusi escrow dan rental kendaraan terpercaya untuk kebutuhan bisnis maupun pribadi.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-xl font-bold text-white mb-4">
+          Menu
+        </h3>
+
+        <ul class="space-y-3">
+
+          <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+          <li><a href="escrow.html" class="hover:text-orange-400">Layanan Escrow</a></li>
+          <li><a href="mobil.html" class="hover:text-orange-400">Rental Mobil</a></li>
+          <li><a href="truk.html" class="hover:text-orange-400">Rental Truk</a></li>
+          <li><a href="kontak.html" class="hover:text-orange-400">Hubungi Kami</a></li>
+
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-xl font-bold text-white mb-4">
+          Kontak
+        </h3>
+
+        <div class="space-y-3 text-gray-400">
+
+          <p>📍 Indonesia</p>
+          <p>📞 +62 812-3456-7890</p>
+          <p>✉ info@safetrans.id</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-500 text-sm">
+      <p id="year"></p>
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script>
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('year').innerHTML =
+    `© ${new Date().getFullYear()} SafeTrans. All Rights Reserved.`;
+
+  </script>
+
+</body>
+</html>

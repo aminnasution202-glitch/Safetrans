@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran Rental Mobil | SafeTrans</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff7ed; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-extrabold text-orange-600">SafeTrans</a>
+    <a href="checkout-mobil.html" class="text-orange-600 font-semibold hover:underline">← Kembali</a>
+  </div>
+</header>
+
+<!-- Header -->
+<section class="bg-orange-600 text-white py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="text-3xl font-extrabold">Pembayaran</h1>
+    <p class="text-orange-100 mt-1">Selesaikan pembayaran untuk mengonfirmasi booking Anda.</p>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 py-10">
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Detail Booking -->
+    <div class="md:col-span-2 space-y-6">
+
+      <div class="bg-white rounded-3xl shadow-xl p-8">
+        <h2 class="text-xl font-bold mb-6">Detail Pesanan</h2>
+
+        <!-- Alert jika data tidak ada -->
+        <div id="alertNoData" class="hidden bg-red-50 border border-red-200 text-red-700 rounded-xl p-4 mb-6 text-sm">
+          ⚠️ Data booking tidak ditemukan. Silakan kembali ke halaman checkout.
+        </div>
+
+        <div class="space-y-4 text-sm" id="detailPesanan">
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">No. Booking</span>
+            <span id="bookingNumber" class="font-semibold text-right text-orange-600"></span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">Mobil</span>
+            <span id="mobil" class="font-semibold text-right"></span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">Paket</span>
+            <span id="paket" class="font-semibold text-right"></span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">Nama Penyewa</span>
+            <span id="nama" class="font-semibold text-right"></span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">No. WhatsApp</span>
+            <span id="telepon" class="font-semibold text-right"></span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">Email</span>
+            <span id="email" class="font-semibold text-right"></span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">Tanggal Rental</span>
+            <span id="tanggal" class="font-semibold text-right"></span>
+          </div>
+          <div class="flex justify-between py-3 border-b border-gray-100">
+            <span class="text-gray-500">Durasi</span>
+            <span id="durasi" class="font-semibold text-right"></span>
+          </div>
+          <div class="flex justify-between py-3">
+            <span class="text-gray-500">Lokasi Jemput</span>
+            <span id="lokasiJemput" class="font-semibold text-right max-w-xs"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload Bukti -->
+      <div class="bg-white rounded-3xl shadow-xl p-8">
+        <h3 class="font-bold text-lg mb-2">Upload Bukti Pembayaran</h3>
+        <p class="text-gray-500 text-sm mb-4">Format: JPG, PNG, atau PDF. Maks. 5MB.</p>
+        <input type="file" id="buktiBayar" accept="image/*,.pdf"
+          class="w-full border-2 border-dashed border-gray-300 rounded-xl p-4 text-sm cursor-pointer hover:border-orange-400 transition">
+        <p class="text-xs text-gray-400 mt-2">* Upload bukti transfer setelah melakukan pembayaran</p>
+      </div>
+
+    </div>
+
+    <!-- Ringkasan Pembayaran -->
+    <div class="bg-white rounded-3xl shadow-xl p-8 h-fit sticky top-24">
+      <h2 class="text-xl font-bold mb-6">Ringkasan Pembayaran</h2>
+
+      <div class="space-y-3 text-sm">
+        <div class="flex justify-between">
+          <span class="text-gray-500">Harga per Hari</span>
+          <span id="hargaPerHari" class="font-semibold">—</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-500">Durasi</span>
+          <span id="durasiRingkas" class="font-semibold">—</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-gray-500">Asuransi</span>
+          <span class="text-green-600 font-semibold">Gratis</span>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="flex justify-between items-center">
+        <span class="font-bold">Total Tagihan</span>
+        <span id="totalHarga" class="font-extrabold text-xl text-orange-600">Rp0</span>
+      </div>
+
+      <hr class="my-6">
+
+      <h3 class="font-bold mb-3 text-sm">Transfer ke Rekening</h3>
+      <div class="bg-orange-50 border border-orange-100 p-4 rounded-2xl space-y-1 text-sm">
+        <p class="font-bold text-orange-700">Bank BCA</p>
+        <p class="text-2xl font-extrabold tracking-widest text-gray-800">1234 5678 90</p>
+        <p class="text-gray-500">a.n. PT SafeTrans Indonesia</p>
+        <button onclick="navigator.clipboard.writeText('1234567890').then(()=>alert('Nomor rekening disalin!'))"
+          class="mt-2 text-orange-600 text-xs font-semibold hover:underline">
+          📋 Salin Nomor Rekening
+        </button>
+      </div>
+
+      <button id="btnKonfirmasi"
+        class="w-full mt-6 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold py-4 rounded-2xl transition-all disabled:opacity-60 disabled:cursor-not-allowed">
+        Konfirmasi Pembayaran ✓
+      </button>
+
+      <!-- Loading indicator -->
+      <div id="loadingKonfirmasi" class="hidden mt-3 text-center text-sm text-orange-500 font-medium animate-pulse">
+        ⏳ Mengirim konfirmasi...
+      </div>
+
+      <!-- Error indicator -->
+      <div id="errorKonfirmasi" class="hidden mt-3 bg-red-50 border border-red-200 text-red-600 rounded-xl p-3 text-xs text-center">
+        ⚠️ Gagal update ke server, tetap lanjut...
+      </div>
+
+      <p class="text-center text-xs text-gray-400 mt-4">🔒 Transaksi aman bersama SafeTrans</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ============================================================
+// KONFIGURASI — ganti URL ini setelah deploy App Script
+// ============================================================
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyBahGLiUJtPSO9b3RoABmjIaPVKQdngi2RxAPIE-iZTqK0B-9Gz-G4nqGoe49pdoL5/exec";
+// ============================================================
+
+// Muat data booking dari localStorage
+const booking = JSON.parse(localStorage.getItem("bookingMobil"));
+
+if (!booking) {
+  document.getElementById("alertNoData").classList.remove("hidden");
+  document.getElementById("detailPesanan").classList.add("opacity-40", "pointer-events-none");
+} else {
+  // Isi data ke UI
+  document.getElementById("bookingNumber").innerText = booking.bookingNumber || "—";
+  document.getElementById("mobil").innerText = booking.mobil || "—";
+  document.getElementById("paket").innerText = booking.paket || "—";
+  document.getElementById("nama").innerText = booking.nama || "—";
+  document.getElementById("telepon").innerText = booking.telepon || "—";
+  document.getElementById("email").innerText = booking.email || "—";
+  document.getElementById("lokasiJemput").innerText = booking.lokasiJemput || "—";
+  document.getElementById("durasi").innerText = (booking.durasi || 1) + " hari";
+  document.getElementById("durasiRingkas").innerText = (booking.durasi || 1) + " hari";
+  document.getElementById("hargaPerHari").innerText = booking.hargaPerHari || "—";
+  document.getElementById("totalHarga").innerText = booking.totalHarga || "Rp0";
+
+  // Format tanggal
+  if (booking.tanggalMulai && booking.tanggalSelesai) {
+    const fmt = (d) => new Date(d).toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" });
+    document.getElementById("tanggal").innerText = fmt(booking.tanggalMulai) + " – " + fmt(booking.tanggalSelesai);
+  }
+}
+
+// ============================================================
+// Tombol Konfirmasi Pembayaran — DIPERBAIKI (kirim ke Sheets)
+// ============================================================
+document.getElementById("btnKonfirmasi").addEventListener("click", async function () {
+  if (!booking) {
+    alert("Data booking tidak ditemukan. Silakan kembali ke halaman checkout.");
+    return;
+  }
+
+  const buktiBayar = document.getElementById("buktiBayar");
+  if (!buktiBayar.files || buktiBayar.files.length === 0) {
+    alert("Mohon upload bukti pembayaran terlebih dahulu.");
+    return;
+  }
+
+  const now = new Date();
+  const invoiceNumber = `INV-${now.getFullYear()}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}-${Date.now().toString().slice(-6)}`;
+  const waktuKonfirmasi = now.toLocaleString("id-ID");
+
+  // Update data booking
+  booking.invoiceNumber = invoiceNumber;
+  booking.status = "Menunggu Verifikasi";
+  booking.waktuKonfirmasi = waktuKonfirmasi;
+
+  // Simpan update ke localStorage
+  localStorage.setItem("bookingMobil", JSON.stringify(booking));
+
+  // Tampilkan loading, nonaktifkan tombol
+  const btn = document.getElementById("btnKonfirmasi");
+  const loading = document.getElementById("loadingKonfirmasi");
+  const errorBox = document.getElementById("errorKonfirmasi");
+  btn.disabled = true;
+  loading.classList.remove("hidden");
+  errorBox.classList.add("hidden");
+
+  // ---- Update status ke Google Sheets ----
+  const updateData = {
+    action: "updateStatus",           // ← App Script akan menangani ini
+    bookingNumber: booking.bookingNumber,
+    invoiceNumber,
+    status: "Menunggu Verifikasi",
+    waktuKonfirmasi
+  };
+
+  try {
+    await fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(updateData)
+    });
+
+    console.log("Status berhasil diupdate ke Google Sheets");
+  } catch (err) {
+    console.error("Gagal update Google Sheets:", err);
+    errorBox.classList.remove("hidden");
+    await new Promise(r => setTimeout(r, 2000));
+  } finally {
+    loading.classList.add("hidden");
+    btn.disabled = false;
+  }
+
+  // Lanjut ke halaman sukses
+  window.location.href = "success.html";
+});
+</script>
+
+</body>
+</html>

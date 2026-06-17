@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hubungi Kami | SafeTrans</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      background:#fff7ed;
+    }
+
+    .hero-bg{
+      background:linear-gradient(to right,#ea580c,#fb923c);
+    }
+
+    .glass{
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="leading-tight">
+
+        <a href="index.html" class="text-2xl font-extrabold text-orange-600 block">
+          SafeTrans
+        </a>
+
+        <span class="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+          Escrow • Rental Mobil • Rental Truk
+        </span>
+
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 font-semibold">
+
+        <a href="index.html" class="hover:text-orange-500 transition">
+          Home
+        </a>
+
+        <a href="escrow.html" class="hover:text-orange-500 transition">
+          Layanan Escrow
+        </a>
+
+        <a href="mobil.html" class="hover:text-orange-500 transition">
+          Rental Mobil
+        </a>
+
+        <a href="truk.html" class="hover:text-orange-500 transition">
+          Rental Truk
+        </a>
+
+        <a href="kontak.html"
+          class="text-orange-600 border-b-2 border-orange-500 pb-1">
+          Hubungi Kami
+        </a>
+
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-orange-600">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+
+          <path stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+
+        </svg>
+
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-gray-200 px-5 pb-5">
+
+      <div class="flex flex-col gap-4 font-semibold mt-4">
+
+        <a href="index.html" class="hover:text-orange-500">
+          Home
+        </a>
+
+        <a href="escrow.html" class="hover:text-orange-500">
+          Layanan Escrow
+        </a>
+
+        <a href="mobil.html" class="hover:text-orange-500">
+          Rental Mobil
+        </a>
+
+        <a href="truk.html" class="hover:text-orange-500">
+          Rental Truk
+        </a>
+
+        <a href="kontak.html" class="text-orange-600">
+          Hubungi Kami
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-bg pt-32 pb-24">
+
+    <div class="max-w-7xl mx-auto px-5 text-center text-white">
+
+      <div class="inline-block bg-white/20 px-4 py-2 rounded-full mb-5 text-sm font-semibold">
+        Customer Support & Consultation
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+        Hubungi Tim SafeTrans
+      </h1>
+
+      <p class="text-lg text-orange-100 max-w-3xl mx-auto leading-relaxed">
+        Kami siap membantu kebutuhan layanan escrow, rental mobil,
+        dan rental truk Anda dengan pelayanan profesional,
+        cepat, dan terpercaya.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-white">
+
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-start">
+
+      <!-- Left -->
+      <div>
+
+        <h2 class="text-4xl font-extrabold text-orange-600 mb-6">
+          Informasi Kontak
+        </h2>
+
+        <p class="text-gray-600 text-lg leading-relaxed mb-10">
+          Jangan ragu untuk menghubungi kami untuk konsultasi,
+          pertanyaan layanan, penawaran kerja sama,
+          maupun kebutuhan operasional bisnis Anda.
+        </p>
+
+        <div class="space-y-6">
+
+          <!-- Card -->
+          <div class="bg-orange-50 rounded-3xl p-6 shadow-lg flex gap-5 items-start">
+
+            <div class="text-4xl">
+              📍
+            </div>
+
+            <div>
+
+              <h3 class="text-xl font-bold text-orange-600 mb-2">
+                Alamat
+              </h3>
+
+              <p class="text-gray-600 leading-relaxed">
+                Jakarta, Indonesia
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Card -->
+          <div class="bg-orange-50 rounded-3xl p-6 shadow-lg flex gap-5 items-start">
+
+            <div class="text-4xl">
+              📞
+            </div>
+
+            <div>
+
+              <h3 class="text-xl font-bold text-orange-600 mb-2">
+                Telepon
+              </h3>
+
+              <p class="text-gray-600 leading-relaxed">
+                +62 812-3456-7890
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Card -->
+          <div class="bg-orange-50 rounded-3xl p-6 shadow-lg flex gap-5 items-start">
+
+            <div class="text-4xl">
+              ✉️
+            </div>
+
+            <div>
+
+              <h3 class="text-xl font-bold text-orange-600 mb-2">
+                Email
+              </h3>
+
+              <p class="text-gray-600 leading-relaxed">
+                info@safetrans.id
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Card -->
+          <div class="bg-orange-50 rounded-3xl p-6 shadow-lg flex gap-5 items-start">
+
+            <div class="text-4xl">
+              ⏰
+            </div>
+
+            <div>
+
+              <h3 class="text-xl font-bold text-orange-600 mb-2">
+                Jam Operasional
+              </h3>
+
+              <p class="text-gray-600 leading-relaxed">
+                Senin - Sabtu<br>
+                08:00 - 20:00 WIB
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div>
+
+        <div class="bg-white rounded-3xl shadow-2xl p-8 border border-orange-100">
+
+          <h2 class="text-3xl font-extrabold text-orange-600 mb-6">
+            Kirim Pesan
+          </h2>
+
+          <form class="space-y-6">
+
+            <!-- Nama -->
+            <div>
+
+              <label class="block mb-2 font-semibold text-gray-700">
+                Nama Lengkap
+              </label>
+
+              <input
+                type="text"
+                placeholder="Masukkan nama lengkap"
+                class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              />
+
+            </div>
+
+            <!-- Email -->
+            <div>
+
+              <label class="block mb-2 font-semibold text-gray-700">
+                Email
+              </label>
+
+              <input
+                type="email"
+                placeholder="Masukkan email"
+                class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              />
+
+            </div>
+
+            <!-- Telepon -->
+            <div>
+
+              <label class="block mb-2 font-semibold text-gray-700">
+                Nomor Telepon
+              </label>
+
+              <input
+                type="text"
+                placeholder="Masukkan nomor telepon"
+                class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              />
+
+            </div>
+
+            <!-- Layanan -->
+            <div>
+
+              <label class="block mb-2 font-semibold text-gray-700">
+                Pilih Layanan
+              </label>
+
+              <select
+                class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange-500">
+
+                <option>Layanan Escrow</option>
+                <option>Rental Mobil</option>
+                <option>Rental Truk</option>
+
+              </select>
+
+            </div>
+
+            <!-- Pesan -->
+            <div>
+
+              <label class="block mb-2 font-semibold text-gray-700">
+                Pesan
+              </label>
+
+              <textarea
+                rows="5"
+                placeholder="Tulis pesan Anda..."
+                class="w-full border border-gray-300 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+
+            </div>
+
+            <!-- Button -->
+            <button
+              type="submit"
+              class="w-full bg-orange-600 text-white py-4 rounded-2xl font-bold hover:bg-orange-700 hover:scale-[1.01] transition shadow-lg">
+
+              Kirim Pesan
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Map -->
+  <section class="py-20 bg-orange-100">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center mb-12">
+
+        <h2 class="text-4xl font-extrabold text-orange-700 mb-5">
+          Lokasi Kami
+        </h2>
+
+        <p class="text-gray-600">
+          SafeTrans siap melayani kebutuhan bisnis dan transportasi Anda.
+        </p>
+
+      </div>
+
+      <div class="rounded-3xl overflow-hidden shadow-2xl">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253840.49128663656!2d106.66470361930889!3d-6.229728028922179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e5f0c7f65f%3A0x3039d80b220caa0!2sJakarta!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-orange-600 text-white text-center">
+
+    <div class="max-w-4xl mx-auto px-5">
+
+      <h2 class="text-4xl font-extrabold mb-6">
+        Siap Menggunakan Layanan SafeTrans?
+      </h2>
+
+      <p class="text-orange-100 text-lg leading-relaxed mb-8">
+        Hubungi kami sekarang dan konsultasikan kebutuhan escrow,
+        rental mobil, maupun rental truk Anda.
+      </p>
+
+      <a href="https://wa.me/6281234567890"
+        target="_blank"
+        class="bg-white text-orange-600 px-8 py-4 rounded-2xl font-bold hover:scale-105 transition inline-block shadow-lg">
+
+        WhatsApp Sekarang
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+
+    <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+
+      <div>
+
+        <h2 class="text-2xl font-extrabold text-orange-500 mb-4">
+          SafeTrans
+        </h2>
+
+        <p class="leading-relaxed text-gray-400">
+          Solusi escrow dan rental kendaraan terpercaya untuk kebutuhan bisnis maupun pribadi.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-xl font-bold text-white mb-4">
+          Menu
+        </h3>
+
+        <ul class="space-y-3">
+
+          <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+          <li><a href="escrow.html" class="hover:text-orange-400">Layanan Escrow</a></li>
+          <li><a href="mobil.html" class="hover:text-orange-400">Rental Mobil</a></li>
+          <li><a href="truk.html" class="hover:text-orange-400">Rental Truk</a></li>
+          <li><a href="kontak.html" class="hover:text-orange-400">Hubungi Kami</a></li>
+
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-xl font-bold text-white mb-4">
+          Kontak
+        </h3>
+
+        <div class="space-y-3 text-gray-400">
+
+          <p>📍 Jakarta, Indonesia</p>
+          <p>📞 +62 812-3456-7890</p>
+          <p>✉ info@safetrans.id</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-500 text-sm">
+      <p id="year"></p>
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script>
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('year').innerHTML =
+    `© ${new Date().getFullYear()} SafeTrans. All Rights Reserved.`;
+
+  </script>
+
+</body>
+</html>
